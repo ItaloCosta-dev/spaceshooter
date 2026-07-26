@@ -2,11 +2,11 @@
 controla_player = function()
 {
 	var _cima, _baixo, _esquerda, _direita, _atirar; // Ações do jogador
-	_cima = keyboard_check(ord("W")); // Movimentando o player para cima	
-	_baixo = keyboard_check(ord("S")); // Movimentando o player para baixo
-	_esquerda = keyboard_check(ord("A")); // Movimentando o player para a esquerda
-	_direita = keyboard_check(ord("D")); // Movimentando o player para a direita
-	_atirar = keyboard_check(vk_space); // Atirando com o SPACE
+	_cima = keyboard_check(ord("W")) or keyboard_check(vk_up); // Movimentando o player para cima	
+	_baixo = keyboard_check(ord("S")) or keyboard_check(vk_down); // Movimentando o player para baixo
+	_esquerda = keyboard_check(ord("A")) or keyboard_check(vk_left); // Movimentando o player para a esquerda
+	_direita = keyboard_check(ord("D")) or keyboard_check(vk_right); // Movimentando o player para a direita
+	_atirar = keyboard_check(vk_space) or mouse_check_button(mb_left); // Atirando com o SPACE
 
 
 	// TESTES - APAGAR DEPOIS! //
