@@ -40,13 +40,19 @@ controla_player = function()
 	
 	timer_tiro--; // Diminuindo o timer do tiro (agora o tiro sai intermitente)
 	
-	// Atirando
+	// Chamando o método de tiro 1
 	if (_atirar && timer_tiro <= 0)
 	{
-		var _tiro = instance_create_layer(x, y, "Tiros", obj_tiro_player); // Criando o tiro
-		_tiro.vspeed = -10; // Fazendo o tiro ir para cima
+		tiro_1();
 		timer_tiro = espera_tiro; // Avisando que o timer foi resetado
 	}
 }
 
+
+//===== MÉTODO DE TIROS =====//
+tiro_1 = function()
+{
+	var _tiro = instance_create_layer(x, y, "Tiros", obj_tiro_player); // Criando o tiro
+	_tiro.vspeed = -10; // Fazendo o tiro ir para cima
+}
 
