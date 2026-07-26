@@ -31,6 +31,13 @@ controla_player = function()
 	{
 		x += velocidade;
 	}
+	
+	// Atirando
+	if (_atirar)
+	{
+		var _tiro = instance_create_layer(x, y, "Tiros", obj_tiro_player); // Criando o tiro
+		_tiro.vspeed = -10; // Fazendo o tiro ir para cima
+	}
 }
 
 
