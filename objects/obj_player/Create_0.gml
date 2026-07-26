@@ -1,5 +1,7 @@
 //===== VARIÁVEIS =====//
 velocidade = 2; // Velocidade do player
+espera_tiro = 10; // Delay do tiro
+timer_tiro = 0; // Conta o tempo entre um tiro e outro
 
 // Sistema de controle do Jogador //
 controla_player = function()
@@ -32,11 +34,13 @@ controla_player = function()
 		x += velocidade;
 	}
 	
+	timer_tiro--; // Diminuindo o timer do tiro (agora o tiro sai intermitente)
 	// Atirando
-	if (_atirar)
+	if (_atirar && timer_tiro <= 0)
 	{
 		var _tiro = instance_create_layer(x, y, "Tiros", obj_tiro_player); // Criando o tiro
 		_tiro.vspeed = -10; // Fazendo o tiro ir para cima
+		timer_tiro = espera_tiro; // Avisando que o timer foi resetado
 	}
 }
 
