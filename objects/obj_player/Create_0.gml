@@ -1,3 +1,6 @@
+//===== VARIÁVEIS =====//
+velocidade = 2; // Velocidade do player
+
 // Sistema de controle do Jogador //
 controla_player = function()
 {
@@ -8,27 +11,25 @@ controla_player = function()
 	_direita = keyboard_check(ord("D")) or keyboard_check(vk_right); // Movimentando o player para a direita
 	_atirar = keyboard_check(vk_space) or mouse_check_button(mb_left); // Atirando com o SPACE
 
-
-	// TESTES - APAGAR DEPOIS! //
+	// Movendo o player para cima
 	if (_cima == true)
 	{
-		show_message("cima")
+		y -= velocidade; 
 	}
+	// Movendo o player para baixo
 	if (_baixo == true)
 	{
-		show_message("baixo")
+		y += velocidade;
 	}
+	// Movendo o player para a esquerda
 	if (_esquerda == true)
 	{
-		show_message("esquerda")
+		x -= velocidade;
 	}
+	// Movendo o player para a direita
 	if (_direita == true)
 	{
-		show_message("direita")
-	}
-	if (_atirar == true)
-	{
-		show_message("Atirar")
+		x += velocidade;
 	}
 }
 
