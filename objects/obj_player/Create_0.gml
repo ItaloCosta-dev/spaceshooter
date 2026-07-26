@@ -34,7 +34,12 @@ controla_player = function()
 		x += velocidade;
 	}
 	
+	x = clamp(x, 19, room_width - 19); // Impedindo o jogador a sair pelas laterais
+	y = clamp(y, 19, room_height - 19); // // Impedindo o jogador a sair por cima ou por baixo
+	
+	
 	timer_tiro--; // Diminuindo o timer do tiro (agora o tiro sai intermitente)
+	
 	// Atirando
 	if (_atirar && timer_tiro <= 0)
 	{
