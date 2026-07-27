@@ -1,0 +1,1 @@
+instance_destroy(); // Destruindo power up ao colidir com o player

@@ -82,6 +82,6 @@ tiro_2 = function() // Método de tiro 2
 
 tiro_3 = function() // Método de tiro 3 - Junção do tiro 1 e tiro 2
 {
-	tiro_1();
-	tiro_2();
+	tiro_1(); // Chamando tiro 1
+	tiro_2(); // Chamando tiro 2
 }
