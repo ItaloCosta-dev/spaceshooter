@@ -43,16 +43,27 @@ controla_player = function()
 	// Chamando o método de tiro 1
 	if (_atirar && timer_tiro <= 0)
 	{
-		tiro_1();
+		tiro_2();
 		timer_tiro = espera_tiro; // Avisando que o timer foi resetado
 	}
 }
 
 
 //===== MÉTODO DE TIROS =====//
-tiro_1 = function()
+tiro_1 = function() // Método de tiro 1
 {
 	var _tiro = instance_create_layer(x, y, "Tiros", obj_tiro_player); // Criando o tiro
 	_tiro.vspeed = -10; // Fazendo o tiro ir para cima
+}
+
+tiro_2 = function() // Método de tiro 2
+{
+	// Tiro da esquerda
+	var _tiro = instance_create_layer(x - 10, y, "Tiros", obj_tiro_player);
+	_tiro.vspeed = -10;
+	
+	// Tiro da diretia
+	_tiro = instance_create_layer(x + 10, y, "Tiros", obj_tiro_player);
+	_tiro.vspeed = -10;
 }
 
