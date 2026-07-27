@@ -2,6 +2,7 @@
 velocidade = 2; // Velocidade do player
 espera_tiro = 10; // Delay do tiro
 timer_tiro = 0; // Conta o tempo entre um tiro e outro
+level_tiro = 1; // Define o level inicial do tiro
 
 // Sistema de controle do Jogador //
 controla_player = function()
@@ -43,7 +44,15 @@ controla_player = function()
 	// Chamando o método de tiro 1
 	if (_atirar && timer_tiro <= 0)
 	{
-		tiro_2();
+		// Alterando o level do tiro
+		if (level_tiro == 1) // Tiro 1
+		{
+			tiro_1();
+		}
+		else if (level_tiro == 2) // Tiro 2
+		{
+			tiro_2();
+		}
 		timer_tiro = espera_tiro; // Avisando que o timer foi resetado
 	}
 }
