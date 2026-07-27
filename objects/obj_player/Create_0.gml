@@ -85,3 +85,9 @@ tiro_3 = function() // Método de tiro 3 - Junção do tiro 1 e tiro 2
 	tiro_1(); // Chamando tiro 1
 	tiro_2(); // Chamando tiro 2
 }
+
+
+ganha_level_tiro = function() // Sistema de ganho de level do player
+{
+	level_tiro++;	
+}
