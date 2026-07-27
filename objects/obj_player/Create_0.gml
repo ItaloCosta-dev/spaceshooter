@@ -89,5 +89,9 @@ tiro_3 = function() // Método de tiro 3 - Junção do tiro 1 e tiro 2
 
 ganha_level_tiro = function() // Sistema de ganho de level do player
 {
-	level_tiro++;	
+	if (level_tiro < 3) // Limitando o level do tiro até 3
+	{
+		level_tiro++;
+	}
+		
 }
