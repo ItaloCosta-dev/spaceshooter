@@ -53,6 +53,10 @@ controla_player = function()
 		{
 			tiro_2();
 		}
+		else if (level_tiro == 3) // Tiro 3
+		{
+			tiro_3();
+		}
 		timer_tiro = espera_tiro; // Avisando que o timer foi resetado
 	}
 }
@@ -76,3 +80,8 @@ tiro_2 = function() // Método de tiro 2
 	_tiro.vspeed = -10;
 }
 
+tiro_3 = function() // Método de tiro 3 - Junção do tiro 1 e tiro 2
+{
+	tiro_1();
+	tiro_2();
+}
