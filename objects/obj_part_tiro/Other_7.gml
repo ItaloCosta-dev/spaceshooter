@@ -1,0 +1,1 @@
+instance_destroy(); // Destrói a partícula quando ela acaba
