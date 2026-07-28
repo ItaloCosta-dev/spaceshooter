@@ -94,6 +94,15 @@ ganha_level_tiro = function() // Sistema de ganho de level do player
 	if (level_tiro < 3) // Limitando o level do tiro até 3
 	{
 		level_tiro++;
+	}	
+}
+
+desenha_icone = function(_icone = spr_icone_vida, _qtd = 1, _y = 20) // Função que desenha os ícones de vida do jogador
+{
+	var _espaco = 20; // Valor do espaço entre cada ícone de vida
+	repeat(_qtd) // Desenhando ícone da vida do player usando laço de repetição
+	{
+		draw_sprite(_icone, 0, 20 + _espaco, _y); // Desenhando o ícone da vida
+		_espaco += 30; // Espaço entre os ícones
 	}
-		
 }
