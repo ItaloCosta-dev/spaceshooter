@@ -106,3 +106,15 @@ desenha_icone = function(_icone = spr_icone_vida, _qtd = 1, _y = 20) // Função
 		_espaco += 30; // Espaço entre os ícones
 	}
 }
+
+perde_vida = function() // Método para perder vida
+{
+	if (vidas > 0) // Com zero de vidas eu e=ainda estou vivo
+	{
+		vidas--;
+	}
+	else
+	{
+		instance_destroy();
+	}
+}

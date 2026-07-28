@@ -1,5 +1,10 @@
 controla_player() // Chamando a função controla player
 
+if (keyboard_check_pressed(vk_enter)) // Debug de perder vida
+{
+	perde_vida();
+}
+
 if (keyboard_check_released(vk_tab)) // Ativando e desativando o debug com o TAB
 {
 	global.debug = !global.debug;
