@@ -5,11 +5,15 @@ timer_tiro = 0; // Conta o tempo entre um tiro e outro
 level_tiro = 1; // Define o level inicial do tiro
 vidas = 3; // Jogador começa com três de vida
 escudos = 3; // Jogador começa com três de escudo
-meu_escudo = noone; // Variável de controle do escudo
+meu_escudo = noone; // Variável de controle do escudo (noone significa "nada")
+tempo_invencivel = game_get_speed(gamespeed_fps); // Tempo de invencibilidade do player com escudo (60 segundos)
+timer_invencivel = 0; // Possibilita o player a tomar dano
 
 // Sistema de controle do Jogador //
 controla_player = function()
 {
+	timer_invencivel--; // Diminuindo o timer invencível
+	
 	var _cima, _baixo, _esquerda, _direita, _atirar; // Ações do jogador
 	_cima = keyboard_check(ord("W")) or keyboard_check(vk_up); // Movimentando o player para cima	
 	_baixo = keyboard_check(ord("S")) or keyboard_check(vk_down); // Movimentando o player para baixo
@@ -64,8 +68,6 @@ controla_player = function()
 	}
 }
 
-
-//===== MÉTODO DE TIROS =====//
 tiro_1 = function() // Método de tiro 1
 {
 	var _tiro = instance_create_layer(x, y, "Tiros", obj_tiro_player); // Criando o tiro
@@ -110,9 +112,12 @@ desenha_icone = function(_icone = spr_icone_vida, _qtd = 1, _y = 20) // Função
 
 perde_vida = function() // Método para perder vida
 {
+	if (timer_invencivel > 0) return; // Só pode tomar dano se estiver SEM ESCUDO
+	
 	if (vidas > 0) // Com zero de vidas eu e=ainda estou vivo
 	{
-		vidas--;
+		vidas--; // Perdendo vidas
+		timer_invencivel = tempo_invencivel; // Posso tomar dano
 	}
 	else
 	{

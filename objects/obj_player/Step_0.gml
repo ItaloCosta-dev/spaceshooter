@@ -23,7 +23,7 @@ if (keyboard_check_pressed(ord("L"))) // Diminuindo o level do tiro
 
 if (keyboard_check_pressed(ord("E"))) // Debug: ao apertar a tecla E perde um escudo
 {
-	usa_escudo();
+	usa_escudo(); // Chamando o método de usar escudo
 }
 
 if (instance_exists(meu_escudo)) //Debug: criando escudo
