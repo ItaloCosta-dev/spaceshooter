@@ -1,0 +1,1 @@
+instance_create_layer(x, y, "Tiros", obj_tiro_inimigo); // Criando o tiro do inimigo

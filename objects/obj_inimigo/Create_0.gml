@@ -1,0 +1,1 @@
+alarm[0] = 120; // Iniciando o alarme em 2 segundos
