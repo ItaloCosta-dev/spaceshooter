@@ -121,5 +121,6 @@ perde_vida = function() // Método para perder vida
 
 usa_escudo = function() // Método para perder escudo
 {
-	escudos--;
+	escudos--; // diminuindo quantidade de escudos
+	instance_create_layer(x, y, layer, obj_escudo); // criando escudo no player
 }

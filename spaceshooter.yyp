@@ -38,6 +38,7 @@
   },
   "name":"spaceshooter",
   "resources":[
+    {"id":{"name":"obj_escudo","path":"objects/obj_escudo/obj_escudo.yy",},},
     {"id":{"name":"obj_part_tiro","path":"objects/obj_part_tiro/obj_part_tiro.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"obj_power_up","path":"objects/obj_power_up/obj_power_up.yy",},},
@@ -50,6 +51,7 @@
     {"id":{"name":"spr_bg1","path":"sprites/spr_bg1/spr_bg1.yy",},},
     {"id":{"name":"spr_bg2","path":"sprites/spr_bg2/spr_bg2.yy",},},
     {"id":{"name":"spr_bg3","path":"sprites/spr_bg3/spr_bg3.yy",},},
+    {"id":{"name":"spr_escudo","path":"sprites/spr_escudo/spr_escudo.yy",},},
     {"id":{"name":"spr_fg","path":"sprites/spr_fg/spr_fg.yy",},},
     {"id":{"name":"spr_icone_escudo","path":"sprites/spr_icone_escudo/spr_icone_escudo.yy",},},
     {"id":{"name":"spr_icone_vida","path":"sprites/spr_icone_vida/spr_icone_vida.yy",},},
