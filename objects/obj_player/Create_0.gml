@@ -5,6 +5,7 @@ timer_tiro = 0; // Conta o tempo entre um tiro e outro
 level_tiro = 1; // Define o level inicial do tiro
 vidas = 3; // Jogador começa com três de vida
 escudos = 3; // Jogador começa com três de escudo
+meu_escudo = noone; // Variável de controle do escudo
 
 // Sistema de controle do Jogador //
 controla_player = function()
@@ -121,10 +122,10 @@ perde_vida = function() // Método para perder vida
 
 usa_escudo = function() // Método para perder escudo
 {
-	if (escudos > 0)
+	if (escudos > 0 && meu_escudo == noone)
 	{
 		escudos--; // diminuindo quantidade de escudos
-		instance_create_layer(x, y, "Escudo", obj_escudo); // criando escudo no player
+		meu_escudo = instance_create_layer(x, y, "Escudo", obj_escudo); // criando escudo no player
 	}
 	
 }
