@@ -19,3 +19,9 @@ if (keyboard_check_pressed(ord("L"))) // Diminuindo o level do tiro
 {
 	level_tiro--;
 }
+
+// Debug: ao apertar a tecla E perde um escudo
+if (keyboard_check_pressed(ord("E")))
+{
+	usa_escudo();
+}

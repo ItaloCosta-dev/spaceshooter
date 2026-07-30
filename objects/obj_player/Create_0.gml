@@ -118,3 +118,8 @@ perde_vida = function() // Método para perder vida
 		instance_destroy();
 	}
 }
+
+usa_escudo = function() // Método para perder escudo
+{
+	escudos--;
+}
