@@ -40,6 +40,7 @@
   "name":"spaceshooter",
   "resources":[
     {"id":{"name":"obj_escudo","path":"objects/obj_escudo/obj_escudo.yy",},},
+    {"id":{"name":"obj_explosao","path":"objects/obj_explosao/obj_explosao.yy",},},
     {"id":{"name":"obj_inimigo","path":"objects/obj_inimigo/obj_inimigo.yy",},},
     {"id":{"name":"obj_part_tiro","path":"objects/obj_part_tiro/obj_part_tiro.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
@@ -55,6 +56,7 @@
     {"id":{"name":"spr_bg2","path":"sprites/spr_bg2/spr_bg2.yy",},},
     {"id":{"name":"spr_bg3","path":"sprites/spr_bg3/spr_bg3.yy",},},
     {"id":{"name":"spr_escudo","path":"sprites/spr_escudo/spr_escudo.yy",},},
+    {"id":{"name":"spr_explosao","path":"sprites/spr_explosao/spr_explosao.yy",},},
     {"id":{"name":"spr_fg","path":"sprites/spr_fg/spr_fg.yy",},},
     {"id":{"name":"spr_icone_escudo","path":"sprites/spr_icone_escudo/spr_icone_escudo.yy",},},
     {"id":{"name":"spr_icone_vida","path":"sprites/spr_icone_vida/spr_icone_vida.yy",},},

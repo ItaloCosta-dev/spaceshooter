@@ -1,0 +1,1 @@
+instance_destroy(); // Destruindo a animação ao acabar

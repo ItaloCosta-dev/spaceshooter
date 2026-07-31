@@ -1,0 +1,1 @@
+sendo_destruido(obj_part_tiro); // Efeito quando o tiro do inimigo bate no escudo
