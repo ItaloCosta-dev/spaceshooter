@@ -45,6 +45,8 @@ controla_player = function()
 	x = clamp(x, 19, room_width - 19); // Impedindo o jogador a sair pelas laterais
 	y = clamp(y, 19, room_height - 19); // // Impedindo o jogador a sair por cima ou por baixo
 	
+	com_escudo(); // Chamando a função que protege o player com escudo
+	
 	
 	timer_tiro--; // Diminuindo o timer do tiro (agora o tiro sai intermitente)
 	
@@ -131,6 +133,24 @@ usa_escudo = function() // Método para perder escudo
 	{
 		escudos--; // diminuindo quantidade de escudos
 		meu_escudo = instance_create_layer(x, y, "Escudo", obj_escudo); // criando escudo no player
+	}	
+}
+
+com_escudo = function() // Método do player com escudo
+{
+	if (keyboard_check_pressed(ord("E"))) // Debug: ao apertar a tecla E perde um escudo
+	{
+		usa_escudo(); // Chamando o método de usar escudo
 	}
-	
+
+	if (instance_exists(meu_escudo)) //Debug: criando escudo
+	{
+		meu_escudo.x = x;
+		meu_escudo.y = y;
+		timer_invencivel = 10; // Player não toma dano
+	}
+	else 
+	{
+		meu_escudo = noone; // Reseta a variável meu_escudo (evitar bug)
+	}
 }
