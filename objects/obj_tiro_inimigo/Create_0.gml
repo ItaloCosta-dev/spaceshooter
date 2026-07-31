@@ -1,1 +1,0 @@
-show_message("Tiro") // Debug do tiro
