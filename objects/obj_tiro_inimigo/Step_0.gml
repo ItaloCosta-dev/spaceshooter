@@ -1,0 +1,1 @@
+if (y > room_height + 50) instance_destroy(); // Fazendo o tiro do inimigo se destruir quando sair da room
