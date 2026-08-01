@@ -1,0 +1,1 @@
+morrendo(); // Se o player estiver com escudo o inimigo morre
