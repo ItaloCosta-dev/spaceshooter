@@ -1,0 +1,1 @@
+instance_create_layer(x, y, layer, obj_part_tiro); // Quando o tiro do player for destruído, ele cria uma partícula
