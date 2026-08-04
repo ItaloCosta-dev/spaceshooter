@@ -1,0 +1,1 @@
+layer_sequence_create("Seq_inimigos", 0, 0, ondas[0]);
