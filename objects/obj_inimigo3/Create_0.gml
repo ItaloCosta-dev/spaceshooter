@@ -1,5 +1,14 @@
 vida = 10; // Vida inicial
 
+// Variável que controla o estado
+estadp = "chegando";
+
+// Máquina de estado
+maquina_de_estado = function()
+{
+	
+}
+
 // Função morrendo
 morrendo = function()
 {
