@@ -1,12 +1,22 @@
 vida = 10; // Vida inicial
 
 // Variável que controla o estado
-estadp = "chegando";
+estado = "chegando";
 
 // Máquina de estado
 maquina_de_estado = function()
 {
-	
+	switch(estado)
+	{
+		case "chegando":
+		{
+			if (y < 160)
+			{
+				vspeed =1.2;
+			}
+			
+		}
+	}
 }
 
 // Função morrendo
