@@ -39,8 +39,10 @@ maquina_de_estado = function()
 		
 		case "atirando":
 		{
+			var _dir = point_direction(x, y, obj_player.x, obj_player.y); // Encontrando a posição do player
 			var _tiro = instance_create_layer(x, y, "Tiros", obj_tiro_inimigo3a); // Criando o meu tiro
-			_tiro.vspeed = 2; // Fazendo o tiro se mover
+			_tiro.speed = 2; // Fazendo o tiro se mover
+			_tiro.direction = _dir;
 			estado = "carregando"
 		}
 		break;
