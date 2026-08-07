@@ -8,14 +8,24 @@ maquina_de_estado = function()
 {
 	switch(estado)
 	{
-		case "chegando":
+		case "chegando": // o inimigo está chegando
 		{
 			if (y < 160)
 			{
-				vspeed =1.2;
+				vspeed = 1.2;
 			}
-			
+			else
+			{
+				estado = "carregando"; // terminou o estado de "chegando", chama o estado "carregando"
+			}
 		}
+		break; // Sai do estado
+		
+		case "carregando": // Carregando o tiro
+		{
+			vspeed = 0; // Fazendo o inimigo parar 
+		}
+		break; // terminei o case
 	}
 }
 
