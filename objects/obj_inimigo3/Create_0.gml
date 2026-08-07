@@ -32,10 +32,21 @@ maquina_de_estado = function()
 				if (timer_carregando >= tempo_carregando)
 				{
 					estado = "atirando"; // Quando bater o tempo muda de estado
+					timer_carregando = 0; // resetando o timer
 				}
 		}
 		break; // terminei o case
+		
+		case "atirando":
+		{
+			var _tiro = instance_create_layer(x, y, "Tiros", obj_tiro_inimigo3a); // Criando o meu tiro
+			_tiro.vspeed = 2; // Fazendo o tiro se mover
+			estado = "carregando"
+		}
+		break;
+		
 	}
+	
 }
 
 // Função morrendo
